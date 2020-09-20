@@ -8,6 +8,7 @@ public class Car {
     private int car_mileage;
     private boolean delivery;
     private int storage;
+    private boolean fixed = true;
 
     //false -> broken
     boolean Brakes = true;
@@ -33,6 +34,14 @@ public class Car {
         if(storage!=0) {
             this.storage = storage;
         }
+    }
+
+    public void setFixed(boolean fixed) {
+        this.fixed = fixed;
+    }
+
+    public boolean isFixed() {
+        return fixed;
     }
 
     public boolean getDelivery() {

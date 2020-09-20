@@ -100,6 +100,18 @@ class CarGenerator {
             car.setDelivery(true,ThreadLocalRandom.current()
                     .nextInt(1,50));
         }
+        if(!car.getBreakes()){
+            car.setFixed(false);
+        }if(!car.getSuspension()){
+            car.setFixed(false);
+        }if(!car.getEngine()){
+            car.setFixed(false);
+        }if(!car.getBody()){
+            car.setFixed(false);
+        }if(!car.getTransmission()){
+            car.setFixed(false);
+        }
+
         return  car;
     }
 }
