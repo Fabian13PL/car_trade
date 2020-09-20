@@ -4,7 +4,7 @@ import java.util.concurrent.ThreadLocalRandom;
 
 class CarGenerator {
 
-    public Car carGenerator(String[] args) {
+    public static Car carGenerator() {
         String[] brand = new String[3];
         brand[0]="Audi";
         brand[1]="Honda";
@@ -93,6 +93,13 @@ class CarGenerator {
         }
         car.setCar_mileage(ThreadLocalRandom.current()
                 .nextInt(20000,200000));
+        if(ThreadLocalRandom.current()
+                .nextInt(0,2)==0) {
+            car.setDelivery(false,0);
+        }else {
+            car.setDelivery(true,ThreadLocalRandom.current()
+                    .nextInt(1,50));
+        }
         return  car;
     }
 }

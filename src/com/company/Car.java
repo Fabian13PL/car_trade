@@ -9,7 +9,6 @@ public class Car {
     private boolean delivery;
     private int storage;
 
-
     //false -> broken
     boolean Brakes = true;
     boolean Suspension = true;
@@ -17,9 +16,23 @@ public class Car {
     boolean Body = true;
     boolean Transmission = true;
 
+    public String toString(){
+        if(delivery) {
+            return "Value: " + value + "/n Brand: " + brand + "/n Segment: " + segment + "/n Color: " + color +
+                    "/n Car mileage: " + car_mileage + "/n Is delivery car?: " + delivery +
+                    "/n Storage:" + storage;
+        }else {
+            return "Value: " + value + "/n Brand: " + brand + "/n Segment: " + segment + "/n Color: " + color +
+                    "/n Car mileage: " + car_mileage + "/n Is delivery car?: " + delivery;
+        }
+
+    }
+
     public void setDelivery(boolean delivery, int storage){
         this.delivery=delivery;
-        this.storage=storage;
+        if(storage!=0) {
+            this.storage = storage;
+        }
     }
 
     public boolean getDelivery() {
