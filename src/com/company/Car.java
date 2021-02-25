@@ -19,12 +19,12 @@ public class Car {
 
     public String toString(){
         if(delivery) {
-            return "Value: " + value + "/n Brand: " + brand + "/n Segment: " + segment + "/n Color: " + color +
-                    "/n Car mileage: " + car_mileage + "/n Is delivery car?: " + delivery +
-                    "/n Storage:" + storage;
+            return "Value: " + value + " \n Brand: " + brand + " \n Segment: " + segment + " \n Color: " + color +
+                    " \n Car mileage: " + car_mileage + " \n Is delivery car?: " + delivery +
+                    " \n Storage:" + storage;
         }else {
-            return "Value: " + value + "/n Brand: " + brand + "/n Segment: " + segment + "/n Color: " + color +
-                    "/n Car mileage: " + car_mileage + "/n Is delivery car?: " + delivery;
+            return "Value: " + value + " \n Brand: " + brand + " \n Segment: " + segment + " \n Color: " + color +
+                    " \n Car mileage: " + car_mileage + " \n Is delivery car?: " + delivery;
         }
 
     }
